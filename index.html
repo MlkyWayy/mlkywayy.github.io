@@ -9,43 +9,78 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
     <!-- My Css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Fontsawesome -->
     <script src="https://kit.fontawesome.com/45611886ed.js" crossorigin="anonymous"></script>
+
+    <!-- Chatbox -->
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "314164da-eb2e-4792-8af1-f73fe447ac0a";
+      (function () {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
+
+    <!-- Parallax -->
+    <script src="js/parallax.js"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon-32x32.jpg" />
 
     <title>Fajar | My Portfolio</title>
   </head>
   <body id="home">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top border-bottom border-1">
       <div class="container">
-        <a class="navbar-brand fw-bold fs-2" href="#">Fajar<span class="text-danger">.</span></a>
+        <a class="navbar-brand fw-bold fs-2" href="#home">Fajar<span class="text-danger">.</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto fw-bolder">
             <a class="nav-link me-4" href="#home">Home</a>
-            <a class="nav-link me-4" href="#">About</a>
-            <a class="nav-link me-4" href="#">Projects</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link me-4" href="#about-me">About</a>
+            <a class="nav-link me-4" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </div>
         </div>
       </div>
     </nav>
 
     <!-- Jumbotron -->
-    <section class="jumbotron mt-5">
-      <div class="container text-center">
-        <img src="images/avatar-1.svg" alt="Images 1" class="images-avatar" />
+    <section class="jumbotron">
+      <div class="container-parallax position-fixed">
+        <div id="scene">
+          <div class="layer" data-depth="1"><img src="images/1.png" alt="" /></div>
+          <div class="layer" data-depth="-1"><img src="images/2.png" alt="" /></div>
+          <div class="layer" data-depth="1"><img src="images/3.png" alt="" /></div>
+          <div class="layer" data-depth="1"><img src="images/4.png" alt="" /></div>
+          <div class="layer" data-depth="-2"><img src="images/5.png" alt="" /></div>
+          <div class="layer" data-depth="-1"><img src="images/6.png" alt="" /></div>
+          <div class="layer" data-depth="2"><img src="images/7.png" alt="" /></div>
+          <div class="layer" data-depth="-2"><img src="images/8.png" alt="" /></div>
+          <div class="layer" data-depth="1"><img src="images/9.png" alt="" /></div>
+          <div class="layer" data-depth="-1"><img src="images/10.png" alt="" /></div>
+          <div class="layer" data-depth="1"><img src="images/11.png" alt="" /></div>
+          <div class="layer" data-depth="2"><img src="images/12.png" alt="" /></div>
+        </div>
+      </div>
+      <div class="container text-center position-relative">
+        <img src="images/avatar2.jpg" alt="Images 1" class="images-avatar rounded-circle" />
         <h1 class="text-light mt-3">Fajar Moch Habibi</h1>
         <p class="text-light fw-light fs-5 mt-3">I'm a Front-End developer</p>
         <div class="social-media mt-4">
           <a href="https://instagram.com/fmhabil._" target="_blank"><i class="fa fa-instagram fs-4 me-3 text-light"></i></a>
           <a href="https://twitter.com/fmhabil" target="_blank"><i class="fa fa-twitter fs-4 me-3 text-light"></i></a>
-          <a href="https://github.com/Fajarr-M" target="_blank"><i class="fa fa-github fs-4 me-3 text-light"></i></a>
+          <a href="https://github.com/Fajarr-M" target="_blank"><i class="fa fa-github fs-4 text-light"></i></a>
         </div>
-        <button type="button" class="btn btn-danger mt-5 rounded-pill px-5">Hire me</button>
+        <a href="#contact" class="btn btn-danger mt-5 rounded-pill px-5">Hire me</a>
       </div>
     </section>
 
@@ -126,10 +161,10 @@
         <div class="row">
           <div class="col-md-4 mt-3 d-flex justify-content-center">
             <div class="image justify-content-center d-flex">
-              <img class="image__img rounded-3" src="images/tumb3.jpg" alt="Loopstudios" />
+              <img class="image__img rounded-3" src="images/P1.jpg" alt="Loopstudios" />
               <div class="image__overlay rounded-3 image__overlay--blur">
                 <div class="image__title">
-                  <a href="https://fajarr-m.github.io/Loopstudios/"><i class="far fa-eye"></i></a>
+                  <a href="https://fajarr-m.github.io/Loopstudios/"><i class="far fa-eye text-light"></i></a>
                 </div>
                 <p class="image__description">Loopstudios</p>
               </div>
@@ -137,10 +172,10 @@
           </div>
           <div class="col-md-4 mt-3 d-flex justify-content-center">
             <div class="image d-flex justify-content-center">
-              <img class="image__img rounded-3" src="images/tumb3.jpg" alt="Funtech Cafe" />
+              <img class="image__img rounded-3" src="images/p2.jpg" alt="Funtech Cafe" />
               <div class="image__overlay image__overlay--blur rounded-3 d-flex justify-content-center">
                 <div class="image__title">
-                  <a href="https://fajarr-m.github.io/funtech-cafe2/"><i class="far fa-eye"></i></a>
+                  <a href="https://fajarr-m.github.io/funtech-cafe2/"><i class="far fa-eye text-light"></i></a>
                 </div>
                 <p class="image__description">Funtech Cafe</p>
               </div>
@@ -148,10 +183,10 @@
           </div>
           <div class="col-md-4 mt-3 d-flex justify-content-center">
             <div class="image d-flex justify-content-center">
-              <img class="image__img rounded-3" src="images/tumb3.jpg" alt="Pirol Desain" />
+              <img class="image__img rounded-3" src="images/p3.jpg" alt="Pirol Desain" />
               <div class="image__overlay image__overlay--blur rounded-3 d-flex justify-content-center">
                 <div class="image__title">
-                  <a href="https://fajarr-m.github.io/Project04/"><i class="far fa-eye"></i></a>
+                  <a href="https://fajarr-m.github.io/Project04/"><i class="far fa-eye text-light"></i></a>
                 </div>
                 <p class="image__description">Pirol Desain (On Going)</p>
               </div>
@@ -160,25 +195,69 @@
         </div>
       </div>
     </section>
-
     <!-- Akhir Project -->
 
     <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="row">
-          <div class="col"><h1>Contact</h1></div>
+        <div class="row text-center mb-4 mt-5">
+          <div class="col text-light"><h1>Contact</h1></div>
         </div>
-        <div class="row">
-          <div class="col"><p>Get In Touch Let's talk about everything</p></div>
-          <div class="col"></div>
+        <div class="row text-center justify-content-center">
+          <div class="col-md-3 text-light">
+            <p class="fs-5">
+              <span class="fs-2 fw-bold ms-5">Get In <span class="text-info">T</span>ouch</span> Let's talk about everything!
+            </p>
+          </div>
+          <div class="col-md-7">
+            <form>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating mt-3">
+                    <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name" />
+                    <label for="floatingInput">Name</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating mt-3 mb-2">
+                    <input type="email" class="form-control rounded-3" id="floatingPassword" placeholder="name@email.com" />
+                    <label for="floatingInput">Email</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-floating mt-3 mb-2">
+                <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="text" />
+                <label for="floatingInput">Subject</label>
+              </div>
+              <div class="form-floating mt-4">
+                <textarea class="form-control rounded-3" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Message</label>
+              </div>
+              <button type="submit" class="btn btn-danger rounded-pill mt-4 px-5">Send Message</button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Akhir Contact -->
 
+    <!-- Footer -->
+    <footer class="mt-5 text-center text-light fw-lighter fs-6 border-top">
+      <div class="container pt-3">
+        <p><i class="far fa-copyright"></i> 2021 Fajar | Build with <i class="fas fa-heart" style="color: salmon"></i></p>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- My JS -->
+    <script>
+      var scene = document.getElementById("scene");
+      var parallax = new Parallax(scene);
+    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
