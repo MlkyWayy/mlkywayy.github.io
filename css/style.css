@@ -157,16 +157,16 @@ footer > .container {
   }
 
   .image {
-    width: 80%;
+    width: 100%;
   }
 
   .image__img {
-    width: 80%;
+    width: 100%;
   }
 
   .image__overlay {
-    width: 80%;
-    margin-left: 10%;
+    width: 100%;
+    /* margin-left: 10%; */
   }
 
   .getin {
