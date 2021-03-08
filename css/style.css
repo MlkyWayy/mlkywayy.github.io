@@ -27,7 +27,6 @@ body {
 }
 
 #about-me {
-  height: 100vh;
   padding-top: 100px !important;
 }
 .html-color {
@@ -50,7 +49,6 @@ body {
 }
 
 #projects {
-  min-height: 500px;
   padding-top: 100px !important;
 }
 .image {
