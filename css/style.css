@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --bg-prim: #353353;
+  --bg-prim: linear-gradient(#494986, #63a1b4);
   --f-prim: "Rubik", sans-serif;
 }
 body {
   font-family: var(--f-prim);
-  background-color: var(--bg-prim);
+  background-image: var(--bg-prim);
 }
 .navbar {
-  background-color: var(--bg-prim);
+  background-color: #63a1b4;
 }
 .jumbotron {
   height: 100vh;
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -25,9 +25,28 @@ body {
 .social-media > a > i:hover {
   color: #0dcaf0 !important;
 }
+
 #about-me {
   height: 100vh;
   padding-top: 100px !important;
+}
+.html-color {
+  color: #e45c3a;
+}
+.html-color-bg {
+  background-color: #e45c3a;
+}
+.javascript-color {
+  color: #f0db4f;
+}
+.javascript-color-bg {
+  background-color: #f0db4f;
+}
+.bootstrap-color {
+  color: #563d7c;
+}
+.bootstrap-color-bg {
+  background-color: #563d7c;
 }
 
 #projects {
@@ -124,6 +143,9 @@ footer > .container {
   .images-avatar {
     margin-top: 200px;
   }
+  .sm-content {
+    font-size: 29px !important;
+  }
   .pb-desc {
     width: 80% !important;
   }
@@ -133,7 +155,7 @@ footer > .container {
 
   .skill {
     font-size: 40px;
-    margin: 6px !important;
+    margin: 10px !important;
   }
 
   .image {
@@ -151,5 +173,15 @@ footer > .container {
 
   .getin {
     margin: 0 !important;
+  }
+
+  .contact-txt1 {
+    display: block !important;
+    /* margin-top: 5px; */
+  }
+
+  .contact-txt2 {
+    display: block !important;
+    margin-top: 5px;
   }
 }
