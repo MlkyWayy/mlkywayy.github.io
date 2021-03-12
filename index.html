@@ -212,30 +212,38 @@
             </p>
           </div>
           <div class="col-md-7">
-            <form>
+            <div class="alert alert-success alert-dismissible fade show text-start d-none" role="alert">
+              <strong>Terimakasih! </strong> Pesan anda berhasil terkirim.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="portfolio-contact">
               <div class="row g-2">
                 <div class="col-md">
                   <div class="form-floating mt-3">
-                    <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name" />
+                    <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="name" name="nama" />
                     <label for="floatingInput">Name</label>
                   </div>
                 </div>
                 <div class="col-md">
                   <div class="form-floating mt-3 mb-2">
-                    <input type="email" class="form-control rounded-3" id="floatingPassword" placeholder="name@email.com" />
+                    <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@email.com" name="email" />
                     <label for="floatingInput">Email</label>
                   </div>
                 </div>
               </div>
               <div class="form-floating mt-3 mb-2">
-                <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="text" />
+                <input type="text" class="form-control rounded-3" id="floatingPassword" placeholder="text" name="subject" />
                 <label for="floatingInput">Subject</label>
               </div>
               <div class="form-floating mt-4">
-                <textarea class="form-control rounded-3" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <textarea class="form-control rounded-3" placeholder="Leave a comment here" id="floatingTextarea2" name="pesan" style="height: 100px"></textarea>
                 <label for="floatingTextarea2">Message</label>
               </div>
-              <button type="submit" class="btn btn-danger rounded-pill mt-4 px-5">Send Message</button>
+              <button type="submit" class="btn btn-danger rounded-pill mt-4 px-5 btn-kirim">Send Message</button>
+              <button class="btn btn-danger rounded-pill mt-4 btn-loading px-4 d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -261,5 +269,32 @@
       var parallax = new Parallax(scene);
     </script>
     <script src="js/script.js"></script>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxCE7rRqiKL9jIfKbYMjCE5ScTKENBzLOe1WNphmgoFrhG0DIaTo9JrdJCFwyjJn5fSaA/exec";
+      const form = document.forms["portfolio-contact"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Menghilangkan button kirim, Menampilkan Button loading
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            console.log("Success!", response);
+            // Menghilangkan button loading, Menampilkan Button kirim
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            //menampilkan alert
+            myAlert.classList.toggle("d-none");
+            //reset form
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
