@@ -40,6 +40,7 @@ body {
 
 #about-me {
   padding-top: 100px !important;
+  min-height: 410px;
 }
 .html-color {
   color: #e45c3a;
