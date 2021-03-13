@@ -2,12 +2,24 @@
 
 :root {
   --bg-prim: linear-gradient(#494986, #63a1b4);
+  --bg-prim2: linear-gradient(#63a1b4, #494986);
   --f-prim: "Rubik", sans-serif;
 }
 body {
   font-family: var(--f-prim);
-  background-image: var(--bg-prim);
+  background: var(--bg-prim);
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-image: var(--bg-prim2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #0dcaf0);
+  border-radius: 6px;
+}
+
 .navbar {
   background-color: #63a1b4;
 }
