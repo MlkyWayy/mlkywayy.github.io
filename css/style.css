@@ -42,6 +42,9 @@ body {
   padding-top: 100px !important;
   min-height: 410px;
 }
+.skill {
+  cursor: pointer;
+}
 .html-color {
   color: #e45c3a;
 }
@@ -68,11 +71,18 @@ body {
 .image {
   position: relative;
   width: 100%;
+  overflow: hidden;
 }
 
 .image__img {
   display: block;
   width: 100%;
+}
+
+.image:hover > img {
+  transform: scale(1.1);
+  border-radius: 60px !important;
+  transition: 0.1s;
 }
 
 .image__overlay {
@@ -103,6 +113,8 @@ body {
 
 .image__overlay:hover {
   opacity: 1;
+  transition: 0.2s;
+  border-radius: 5px;
 }
 
 .image__overlay:hover > * {
@@ -148,6 +160,24 @@ footer > .container {
   background-blend-mode: screen;
 }
 /* akhir parallax */
+
+/* Hover Effect */
+.fa-instagram:hover,
+.fa-twitter:hover,
+.fa-github:hover {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.skill:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.fa-heart:hover {
+  transform: rotate(360deg);
+  transition: 0.8s;
+}
 
 /* Responsive Breakpoints */
 /* Mobile */
