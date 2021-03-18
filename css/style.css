@@ -202,6 +202,13 @@ footer > .container {
     width: 100%;
   }
 
+  .image:hover > img {
+    transform: scale(1);
+    border-radius: 5px !important;
+    /* transition: 0.1s; */
+    filter: blur(0);
+  }
+
   .image__img {
     width: 70%;
   }
@@ -209,6 +216,12 @@ footer > .container {
   .image__overlay {
     width: 70%;
     margin-left: 15%;
+  }
+
+  .image__overlay:hover {
+    opacity: 1;
+    /* transition: 0.2s; */
+    /* border-radius: 5px; */
   }
 
   .getin {
